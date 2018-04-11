@@ -13,15 +13,27 @@ namespace Students.Business.Logic
         IStudentDao studentDao = new StudentDao();
         
 
-        public Student Add(Student student)
-        
+        public Student AddTxt(Student student)   
         {
             student.Register = DateTime.Now;
             student.Age = CalculateAge(student.DateOfBirth, student.Register);
-            return studentDao.Insert(student);
-
+            return studentDao.InsertTxt(student);
         }
-        
+
+        public Student AddJson(Student student)
+        {
+            student.Register = DateTime.Now;
+            student.Age = CalculateAge(student.DateOfBirth, student.Register);
+            return studentDao.InsertJson(student);
+        }
+
+        public Student AddXml(Student student)
+        {
+            student.Register = DateTime.Now;
+            student.Age = CalculateAge(student.DateOfBirth, student.Register);
+            return studentDao.InsertXml(student);
+        }
+
         public int CalculateAge(DateTime DateOfBirth, DateTime CurrentDate)
         {
             return (CurrentDate - DateOfBirth).Days / 365;

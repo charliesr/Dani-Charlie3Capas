@@ -17,6 +17,24 @@ namespace Students.Common.Logic
         public int Age { get; set; }
         public DateTime Register { get; set; }
 
+        public Student()
+        {
+
+        }
+        
+        public Student(int id, string name, string surname, string dni, DateTime dateofbirth, Guid guid, int age, DateTime register)
+        {
+            ID = id;
+            Name = name;
+            Surname = surname;
+            DNI = dni;
+            DateOfBirth = dateofbirth;
+            Guid = guid;
+            Age = age;
+            Register = register;
+
+        }
+
         public void SetGuid()
         {
             Guid = Guid.NewGuid();

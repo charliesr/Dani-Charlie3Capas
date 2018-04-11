@@ -26,19 +26,21 @@ namespace Students.Presentation.WinSite
 
         {
             CargaDatos();
-            studentBL.Add(student);
+            studentBL.AddTxt(student);
 
         }
 
         private void btJSON_Click(object sender, EventArgs e)
         {
             CargaDatos();
+            studentBL.AddJson(student);
 
         }
 
         private void btXML_Click(object sender, EventArgs e)
         {
             CargaDatos();
+            studentBL.AddXml(student);
 
         }
 

@@ -9,7 +9,9 @@ namespace Students.Business.Logic
 {
     public interface IStudentBL
     {
-        Student Add(Student student);
+        Student AddTxt(Student student);
+        Student AddJson(Student student);
+        Student AddXml(Student student);
         int CalculateAge(DateTime DateOfBirth, DateTime CurrentDate);
 
     }

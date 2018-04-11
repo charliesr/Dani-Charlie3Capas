@@ -9,6 +9,8 @@ namespace Students.DataAccess.Dao
 {
      public interface IStudentDao
     {
-        Student Insert(Student student);
+        Student InsertTxt(Student student);
+        Student InsertJson(Student student);
+        Student InsertXml(Student student);
     }
 }
